@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Натяжные потолки «Ассоль», Челябинск — концепт нового сайта</title>
+<meta name="description" content="Фабрика натяжных потолков «Ассоль»: производство, установка и обслуживание. Челябинск, ул. Героев Танкограда, 59 «П».">
+<meta name="theme-color" content="#14232b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#14232b; --night2:#1d3340; --sheet:#f6f3ec; --sheet2:#e9e4d8;
+  --ink:#1b2a32; --mute:#5d6b72; --sail:#c4372c; --sail-d:#a52b21; --glow:#ffe9b8;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Onest,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--sheet);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--sail);outline-offset:3px}
+
+.concept{background:#0b1418;color:#cfd8dc;font-size:13.5px;text-align:center;padding:8px 14px;line-height:1.4}
+.concept a{color:#fff;font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* hero */
+.hero{background:var(--night);position:relative;padding-bottom:0}
+.ceiling{
+  position:relative;background:radial-gradient(120% 90% at 50% 0%,#fffdf8 0%,var(--sheet) 55%,var(--sheet2) 100%);
+  border-radius:0 0 50% 50% / 0 0 70px 70px;padding-bottom:110px;overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.55);
+}
+.ceiling::after{ /* бликующая полоса на полотне */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.65) 48%,transparent 60%);
+  transform:translateX(-120%);animation:sheen 9s ease-in-out 1.2s infinite;
+}
+@keyframes sheen{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0}
+.logo{font-family:Prata,serif;font-size:26px;text-decoration:none;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.logo svg{width:30px;height:30px}
+.logo small{display:block;font-family:Onest,sans-serif;font-size:12px;color:var(--mute);line-height:1.1;margin-top:2px}
+.navlinks{display:flex;gap:26px;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--mute)}
+.navlinks a:hover{color:var(--sail)}
+.tel{font-weight:600;text-decoration:none;white-space:nowrap;font-size:17px}
+.hero-body{padding:54px 0 0;max-width:760px}
+h1{font-size:clamp(36px,6.4vw,70px);margin-bottom:22px}
+.lead{font-size:19px;color:#3b4a52;max-width:560px;margin-bottom:30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16.5px Onest,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,transform .2s}
+.btn-main{background:var(--sail);color:#fff}
+.btn-main:hover{background:var(--sail-d)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn svg{width:18px;height:18px}
+.spots{position:absolute;left:0;right:0;bottom:34px;height:20px;pointer-events:none}
+.spot{position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #d8d2c3,0 0 22px 8px var(--glow),0 0 70px 24px rgba(255,233,184,.55);animation:breathe 4.5s ease-in-out infinite}
+.spot:nth-child(2){animation-delay:.6s}.spot:nth-child(3){animation-delay:1.2s}.spot:nth-child(4){animation-delay:1.8s}.spot:nth-child(5){animation-delay:2.4s}
+@keyframes breathe{0%,100%{opacity:.75}50%{opacity:1}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:46px 0 52px;color:#dfe7ea}
+.facts b{display:block;font-family:Prata,serif;font-weight:400;font-size:21px;color:#fff;margin-bottom:4px}
+.facts span{font-size:15px;color:#a9bac2}
+
+section{padding:84px 0}
+h2{font-size:clamp(28px,4.2vw,42px);margin-bottom:14px}
+.sub{color:var(--mute);max-width:600px;margin-bottom:38px}
+
+/* фактуры */
+.tex{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tcard{border-radius:var(--r);padding:26px 24px 24px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.tcard h3{font-size:25px;margin-bottom:6px}
+.tcard p{font-size:15.5px}
+.t-mat{background:#e6e1d4;color:var(--ink)}
+.t-gloss{background:linear-gradient(135deg,#243d4a 0%,#46697a 38%,#1d3340 52%,#35566a 100%);color:#fff}
+.t-sat{background:linear-gradient(160deg,#f2eee4,#d9d3c3);color:var(--ink)}
+.t-gloss::before{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-30px;top:-40px;background:radial-gradient(circle,rgba(255,255,255,.55),transparent 65%)}
+.more{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.more div{border-top:2px solid var(--ink);padding-top:12px;font-size:15.5px}
+.more b{display:block;font-family:Prata,serif;font-weight:400;font-size:19px;margin-bottom:2px}
+
+/* цены */
+.dark{background:var(--night);color:#e6edf0}
+.dark .sub{color:#9fb1ba}
+.pricebox{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;padding:11px 8px;border-bottom:1px solid rgba(255,255,255,.14)}
+th{font-weight:500;color:#9fb1ba;font-size:13.5px}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+td:last-child{font-weight:600;color:#fff}
+.note{font-size:13.5px;color:#9fb1ba;margin-top:12px}
+.price-h{font-family:Prata,serif;font-size:20px;margin-bottom:6px}
+
+.calc{background:var(--sheet);color:var(--ink);border-radius:var(--r);padding:26px}
+.calc h3{font-size:24px;margin-bottom:16px}
+label{display:block;font-size:14px;font-weight:500;margin:0 0 6px;color:var(--ink)}
+input,select,textarea{width:100%;font:400 17px Onest,sans-serif;padding:13px 14px;border:1.5px solid #b9b3a4;border-radius:10px;background:#fff;color:var(--ink);min-height:50px}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(196,55,44,.35);border-color:var(--sail)}
+.field{margin-bottom:14px}
+.result{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-top:1.5px solid var(--ink);padding-top:14px;margin-top:6px}
+.result output{font-family:Prata,serif;font-size:32px}
+.calc .note{color:var(--mute)}
+
+/* как работаем */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--ink)}
+.step{padding:22px 22px 0 0;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--sail);color:#fff;font:600 15px/32px Onest;text-align:center}
+.step h3{font-size:21px;margin:12px 0 6px}
+.step p{font-size:15.5px;color:var(--mute)}
+
+/* материалы */
+.brands{display:flex;flex-wrap:wrap;gap:10px}
+.brands span{padding:9px 18px;border:1.5px solid var(--ink);border-radius:999px;font-size:15.5px;background:transparent}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.twocol p{color:var(--mute);margin-bottom:14px}
+
+/* контакты */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.contact dl{display:grid;gap:18px}
+.contact dt{font-size:13.5px;color:#9fb1ba}
+.contact dd{font-size:19px;color:#fff}
+.contact dd a{text-decoration:none}
+.contact dd.big{font-family:Prata,serif;font-size:32px}
+.form{background:var(--sheet);color:var(--ink);border-radius:var(--r);padding:26px}
+.form h3{font-size:25px;margin-bottom:4px}
+.demo{display:inline-block;font-size:13px;background:#fbe3a6;color:#5a4300;border-radius:6px;padding:4px 10px;margin:6px 0 16px}
+.form .btn{width:100%}
+.ok{display:none;margin-top:14px;padding:14px;border-radius:10px;background:#dcefd9;color:#1f4a1b;font-size:15.5px}
+.ok.on{display:block}
+
+.fixlist{background:var(--sheet2);border-radius:var(--r);padding:26px 28px}
+.fixlist h3{font-size:22px;margin-bottom:12px}
+.fixlist ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 30px}
+.fixlist li{padding-left:24px;position:relative;font-size:15.5px}
+.fixlist li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:7px;border-left:2.5px solid var(--sail);border-bottom:2.5px solid var(--sail);transform:rotate(-45deg) translateY(-3px)}
+
+footer{background:#0b1418;color:#8fa1aa;font-size:14px;padding:30px 0 100px}
+footer a{color:#cfd8dc}
+
+.callbar{display:none}
+
+@media (max-width:860px){
+  body{font-size:16.5px}
+  .navlinks{display:none}
+  .ceiling{border-radius:0 0 50% 50% / 0 0 36px 36px;padding-bottom:80px}
+  .hero-body{padding-top:30px}
+  .lead{font-size:17.5px}
+  .facts{grid-template-columns:1fr;gap:16px;padding:34px 0 40px}
+  section{padding:58px 0}
+  .tex,.more,.pricebox,.twocol,.contact{grid-template-columns:1fr}
+  .more{grid-template-columns:1fr 1fr}
+  .tcard{min-height:190px}
+  .steps{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink);margin-left:16px}
+  .step{padding:0 0 26px 30px}
+  .step::before{top:0;left:-17px}
+  .step h3{margin-top:2px}
+  .fixlist ul{grid-template-columns:1fr}
+  .spots{bottom:22px}
+  .btn{flex:1 1 100%}
+  .tel{font-size:15px}
+  .logo{font-size:23px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(20,35,43,.96);backdrop-filter:blur(6px)}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:999px;font-weight:600;text-decoration:none;color:#fff}
+  .callbar .c1{background:var(--sail)}
+  .callbar .c2{border:2px solid #5d7480}
+  .callbar svg{width:19px;height:19px}
+}
+@media (prefers-reduced-motion:reduce){
+  .spot,.ceiling::after{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">Концепт нового сайта для «Ассоль (натяжные потолки)». Подготовил Юрий, <a href="tel:+79995884747">+7 999 588-47-47</a></div>
+
+<header class="hero">
+  <div class="ceiling">
+    <div class="wrap">
+      <nav aria-label="Основное">
+        <a class="logo" href="#top" id="top">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V4l20 20z" fill="#c4372c"/><path d="M5 27h22" stroke="#1b2a32" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span>Ассоль<small>фабрика натяжных потолков</small></span>
+        </a>
+        <div class="navlinks">
+          <a href="#faktury">Фактуры</a>
+          <a href="#ceny">Цены</a>
+          <a href="#zamer">Как проходит замер</a>
+          <a href="#kontakty">Контакты</a>
+        </div>
+        <a class="tel" href="tel:+73517753930">8 (351) 775-39-30</a>
+      </nav>
+      <div class="hero-body">
+        <h1>Натяжные потолки «Ассоль». Качество выше головы</h1>
+        <p class="lead">Производим, устанавливаем и обслуживаем натяжные потолки в Челябинске. Установка занимает несколько часов, даже в только что отремонтированной квартире.</p>
+        <div class="btns">
+          <a class="btn btn-main" href="tel:+73517753930"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Позвонить</a>
+          <a class="btn btn-line" href="#zayavka">Вызвать замерщика бесплатно</a>
+        </div>
+      </div>
+    </div>
+    <div class="spots" aria-hidden="true">
+      <i class="spot" style="left:14%"></i><i class="spot" style="left:32%"></i><i class="spot" style="left:50%"></i><i class="spot" style="left:68%"></i><i class="spot" style="left:86%"></i>
+    </div>
+  </div>
+  <div class="wrap facts">
+    <div><b>Собственный цех</b><span>Полотна производим сами</span></div>
+    <div><b>Монтаж за несколько часов</b><span>Почти без пыли и грязи</span></div>
+    <div><b>Выезд специалиста бесплатно</b><span>Подбор цвета, замер, договор</span></div>
+  </div>
+</header>
+
+<main>
+<section id="faktury">
+  <div class="wrap">
+    <h2>Фактуры и цвета полотна</h2>
+    <p class="sub">Потолок может быть матовым, лаковым или сатиновым. Цвет подбираем под цвета в комнате.</p>
+    <div class="tex">
+      <div class="tcard t-mat"><h3>Матовый</h3><p>Почти не отличить от идеально выровненной и покрашенной поверхности.</p></div>
+      <div class="tcard t-gloss"><h3>Лаковый</h3><p>Глянец зрительно увеличивает комнату и отражает свет.</p></div>
+      <div class="tcard t-sat"><h3>Сатин</h3><p>Мягкий перламутровый блеск, спокойнее глянца.</p></div>
+    </div>
+    <div class="more">
+      <div><b>Фотопечать</b>Рисунок на полотне</div>
+      <div><b>«Облака»</b>Лаковые и матовые</div>
+      <div><b>Галактика, металлик</b>Фактуры с блеском</div>
+      <div><b>Многоуровневые</b>Зеркальные, разноуровневые, волнистые</div>
+    </div>
+  </div>
+</section>
+
+<section id="ceny" class="dark">
+  <div class="wrap">
+    <h2>Цены за квадратный метр</h2>
+    <p class="sub">Выбранные позиции из прайс-листа с сайта компании. Это ориентир, точную цену назовёт специалист.</p>
+    <div class="pricebox">
+      <div>
+        <table>
+          <thead><tr><th>Полотно</th><th>руб./м²</th></tr></thead>
+          <tbody>
+            <tr><td>Матовый или лаковый, белый, цветной (Россия), ширина 1,5 м</td><td>270</td></tr>
+            <tr><td>Матовый, сатин белый (Polyplast, Бельгия)</td><td>330</td></tr>
+            <tr><td>Лаковый цветной (Polyplast, Бельгия)</td><td>350</td></tr>
+            <tr><td>Матовый, сатин (Pongs, Германия)</td><td>380</td></tr>
+            <tr><td>Лаковый (RENOLIT, Германия)</td><td>500</td></tr>
+            <tr><td>Галактика, металлик</td><td>550</td></tr>
+            <tr><td>Фотопечать матовая, сатиновая</td><td>3200</td></tr>
+          </tbody>
+        </table>
+        <div class="price-h" style="margin-top:30px">Дополнительные работы</div>
+        <table>
+          <tbody>
+            <tr><td>Пристенный уголок (маскировочная лента), п.м.</td><td>50</td></tr>
+            <tr><td>Профиль стеновой невидимый, п.м.</td><td>70</td></tr>
+            <tr><td>Изготовление и окантовка отверстия</td><td>90</td></tr>
+            <tr><td>Окантовка трубы</td><td>200</td></tr>
+            <tr><td>Монтаж и подключение люстры</td><td>от 100</td></tr>
+            <tr><td>Установка встроенного светильника</td><td>от 200</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Цены взяты из прайс-листа на сайте assol74.ru от 29 октября 2013 года. В рабочей версии здесь будут актуальные цены компании.</p>
+      </div>
+
+      <form class="calc" id="calc" onsubmit="return false">
+        <h3>Прикинуть стоимость</h3>
+        <div class="field">
+          <label for="mat">Полотно</label>
+          <select id="mat">
+            <option value="270">Матовый или лаковый (Россия), 270 руб./м²</option>
+            <option value="330">Матовый, сатин (Polyplast, Бельгия), 330 руб./м²</option>
+            <option value="380">Матовый, сатин (Pongs, Германия), 380 руб./м²</option>
+            <option value="500">Лаковый (RENOLIT, Германия), 500 руб./м²</option>
+            <option value="550">Галактика, металлик, 550 руб./м²</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="area">Площадь потолка, м²</label>
+          <input id="area" type="number" inputmode="decimal" min="1" max="500" value="18">
+        </div>
+        <div class="field">
+          <label for="spots">Встроенных светильников, шт.</label>
+          <input id="spots" type="number" inputmode="numeric" min="0" max="50" value="4">
+        </div>
+        <div class="result"><span>Ориентировочно от</span><output id="sum" aria-live="polite">0 ₽</output></div>
+        <p class="note">Считается полотно и установка светильников (от 200 руб. за штуку) по прайсу 2013 года. Крепёж, углы и другие работы не входят.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="zamer">
+  <div class="wrap">
+    <h2>Как проходит замер</h2>
+    <p class="sub">Специалист приезжает бесплатно, в удобное для вас место и время.</p>
+    <div class="steps">
+      <div class="step"><h3>Вы оставляете заявку</h3><p>Звоните или заполняете форму: имя, телефон, адрес и желаемое время.</p></div>
+      <div class="step"><h3>Приезжает специалист</h3><p>Показывает образцы полотен и отвечает на вопросы.</p></div>
+      <div class="step"><h3>Подбираем цвет и фактуру</h3><p>Делаем замер помещения и оформляем договор.</p></div>
+      <div class="step"><h3>Монтаж</h3><p>Несколько часов, без лишней пыли. Работаем аккуратно.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap twocol">
+    <div>
+      <h2>Материалы</h2>
+      <p>Потолки из отечественных и европейских материалов. Полотна, которые мы используем, имеют сертификаты качества и безопасны для здоровья.</p>
+      <p>На сайте компании есть каталоги цветов и светильников: выбирайте оттенок заранее и уточняйте у специалиста, потому что на экране цвет искажается.</p>
+    </div>
+    <div>
+      <h3 style="font-size:22px;margin-bottom:14px">Работаем с полотнами</h3>
+      <div class="brands"><span>Le ciel</span><span>Ample</span><span>Le notre</span><span>Polyplast</span><span>Pongs</span><span>RENOLIT</span><span>Descor</span><span>Le Nuage</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakty" class="dark">
+  <div class="wrap contact">
+    <div>
+      <h2>Контакты</h2>
+      <p class="sub">Фабрика натяжных потолков «Ассоль»</p>
+      <dl>
+        <div><dt>Телефон (розничные продажи)</dt><dd class="big"><a href="tel:+73512205117">8 (351) 220-51-17</a></dd></div>
+        <div><dt>Телефон / факс (офис)</dt><dd><a href="tel:+73517753930">8 (351) 775-39-30</a>, <a href="tel:+73517753931">775-39-31</a></dd></div>
+        <div><dt>Адрес</dt><dd>454084, г. Челябинск, ул. Героев Танкограда, 59 «П»</dd></div>
+        <div><dt>Часы работы офиса</dt><dd>пн–пт 9:00–18:00, сб 9:00–16:00, вс выходной</dd></div>
+        <div><dt>Отдел розничных продаж</dt><dd>пн–пт 9:00–19:00, сб и вс выходной</dd></div>
+        <div><dt>Почта</dt><dd><a href="mailto:ofis@assol74.ru">ofis@assol74.ru</a></dd></div>
+      </dl>
+    </div>
+    <form class="form" id="zayavka" onsubmit="return demoSend(event)">
+      <h3>Вызвать специалиста</h3>
+      <span class="demo">Демонстрационная форма: данные никуда не отправляются</span>
+      <div class="field"><label for="n">Ваше имя</label><input id="n" name="n" autocomplete="name" required></div>
+      <div class="field"><label for="p">Телефон</label><input id="p" name="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7" required></div>
+      <div class="field"><label for="a">Адрес</label><input id="a" name="a" autocomplete="street-address"></div>
+      <div class="field"><label for="t">Удобное время</label>
+        <select id="t"><option>9:00–12:00</option><option>12:00–15:00</option><option>15:00–18:00</option></select>
+      </div>
+      <button class="btn btn-main" type="submit">Вызвать специалиста</button>
+      <div class="ok" id="ok" role="status">Так будет выглядеть подтверждение. В рабочей версии заявка уйдёт менеджеру, и он перезвонит.</div>
+    </form>
+  </div>
+</section>
+
+<section style="padding:60px 0">
+  <div class="wrap">
+    <div class="fixlist">
+      <h3>Что исправлено в концепте по сравнению с текущим сайтом</h3>
+      <ul>
+        <li>Страница подстраивается под экран телефона</li>
+        <li>Телефон нажимается: звонок в один тап, кнопка всегда под рукой</li>
+        <li>Вместо логотипа и баннера на Flash нарисованы обычная графика и свет</li>
+        <li>Заявка короткая: четыре поля вместо длинной формы с кодом</li>
+        <li>Цены и калькулятор на главной странице, а не в глубине сайта</li>
+        <li>При запуске сайт можно перевести на защищённое соединение HTTPS</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Фабрика натяжных потолков «Ассоль», г. Челябинск, ул. Героев Танкограда, 59 «П». <a href="tel:+73517753930">8 (351) 775-39-30</a>, <a href="mailto:ofis@assol74.ru">ofis@assol74.ru</a>.<br>
+    Это концепт, не официальный сайт компании. Подготовил Юрий, <a href="tel:+79995884747">+7 999 588-47-47</a>.
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+73517753930"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Позвонить</a>
+  <a class="c2" href="#zayavka">Заявка на замер</a>
+</div>
+
+<script>
+(function(){
+  var m=document.getElementById('mat'),a=document.getElementById('area'),s=document.getElementById('spots'),o=document.getElementById('sum');
+  function calc(){
+    var v=(parseFloat(String(a.value).replace(',','.'))||0)*(+m.value)+(parseInt(s.value,10)||0)*200;
+    o.textContent=Math.round(v).toLocaleString('ru-RU')+' ₽';
+  }
+  [m,a,s].forEach(function(e){e.addEventListener('input',calc)});calc();
+})();
+function demoSend(e){e.preventDefault();document.getElementById('ok').classList.add('on');return false}
+</script>
+</body>
+</html>
