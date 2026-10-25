@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Доктор Вет — ветеринарная клиника в Челябинске (концепт)</title>
+<meta name="description" content="Концепт нового сайта ветеринарной клиники «Доктор Вет», Челябинск.">
+<meta name="theme-color" content="#12302e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Rubik:wght@500;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --ink:#12302e;
+  --ink2:#1d4a46;
+  --mint:#eaf3f0;
+  --paper:#f7faf9;
+  --line:#cfe0db;
+  --sun:#f4b73c;
+  --sun-d:#c98a0c;
+  --coral:#e2574c;
+  --muted:#51706b;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:400 17px/1.6 "Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Rubik,sans-serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun-d);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:20px}
+.sec{padding-block:72px}
+.sec--mint{background:var(--mint)}
+.sec--ink{background:var(--ink);color:#e8f2ef}
+h2{font-size:clamp(28px,4vw,40px);margin-block-end:12px}
+.lead{max-width:62ch;color:var(--muted);margin-block-end:36px}
+.sec--ink .lead{color:#a9c6c0}
+
+/* concept strip */
+.strip{background:#0a1f1e;color:#cfe6e1;font-size:14px;line-height:1.4;text-align:center}
+.strip .wrap{padding-block:9px}
+.strip a{color:var(--sun);font-weight:600;white-space:nowrap}
+
+/* header */
+.head{position:sticky;top:0;z-index:20;background:rgba(247,250,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 21px Rubik,sans-serif}
+.logo svg{flex:none}
+.logo small{display:block;font:400 12px "Golos Text";color:var(--muted);margin-top:-2px}
+.nav{display:flex;gap:26px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;padding-block:6px}
+.nav a:hover{color:var(--sun-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding-inline:26px;border-radius:999px;font:600 17px "Golos Text";text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn--sun{background:var(--sun);color:var(--ink)}
+.btn--sun:hover{background:#ffc75a}
+.btn--line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn--line:hover{background:var(--ink);color:#fff}
+.head .btn{min-height:44px;padding-inline:20px;font-size:15px}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:640px;height:640px;right:-160px;top:-200px;background:radial-gradient(circle,rgba(244,183,60,.28),transparent 65%);animation:glow 6s ease-in-out infinite alternate;pointer-events:none}
+@keyframes glow{from{opacity:.55;transform:scale(.95)}to{opacity:1;transform:scale(1.08)}}
+.hero .wrap{position:relative;padding-block:72px 0}
+.hero h1{font-size:clamp(34px,6vw,64px);max-width:15em;margin-block-end:20px}
+.hero p.sub{font-size:19px;max-width:44ch;color:#bcd6d0;margin-block-end:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-block-end:44px}
+.hero .btn--line{border-color:#6f9a93;color:#fff}
+.hero .btn--line:hover{background:#fff;color:var(--ink)}
+.pulse{display:block;width:100%;height:90px;margin-block-start:8px}
+.pulse path{fill:none;stroke:var(--sun);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 3.2s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pets{background:#0a1f1e;color:#9fc2bb;font-size:15px}
+.pets .wrap{padding-block:14px}
+
+/* quick contact cards */
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-block-start:-34px;position:relative}
+.q{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;text-decoration:none;box-shadow:0 10px 30px -18px rgba(18,48,46,.45)}
+.q span{display:block;font-size:13px;color:var(--muted)}
+.q b{font:700 22px Rubik,sans-serif;white-space:nowrap}
+a.q:hover{border-color:var(--sun-d)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;list-style:none;padding:0}
+.svc li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.svc h3{font-size:19px;margin-block-end:6px}
+.svc p{font-size:15px;color:var(--muted)}
+.svc svg{width:30px;height:30px;stroke:var(--ink2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-block-end:10px}
+
+/* exotic */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.ex-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-block:22px}
+.ex-list li{border:1.5px solid #3b6a63;border-radius:999px;padding:6px 16px;font-size:15px;color:#d5ebe6}
+.note{background:rgba(244,183,60,.12);border-left:4px solid var(--sun);padding:16px 18px;border-radius:0 12px 12px 0;color:#f2e6c8;font-size:16px}
+
+/* prices */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-block-end:10px}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font:700 19px Rubik,sans-serif;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--sun-d);line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+.pl{list-style:none;padding:0 22px 14px}
+.pl li{display:flex;gap:12px;justify-content:space-between;align-items:baseline;padding-block:9px;border-top:1px dashed var(--line);font-size:16px}
+.pl li span:last-child{font-weight:600;white-space:nowrap}
+.fine{font-size:14px;color:var(--muted);margin-block-start:14px;max-width:70ch}
+
+/* doctors */
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.doc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.doc h3{font-size:22px;margin-block-end:2px}
+.doc em{display:block;font-style:normal;color:var(--sun-d);font-weight:600;margin-block-end:12px}
+.doc p{font-size:15.5px;color:var(--muted);margin-block-end:8px}
+
+/* pharmacy */
+.pharm{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cross{width:100%;max-width:240px;margin-inline:auto;display:block}
+
+/* form */
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:14px;box-shadow:0 18px 40px -26px rgba(18,48,46,.5)}
+.form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.form input,.form select,.form textarea{font:400 17px "Golos Text";color:var(--ink);padding:13px 14px;border:1.5px solid #b7cdc7;border-radius:12px;background:var(--paper);width:100%;min-height:50px}
+.form textarea{min-height:90px;resize:vertical}
+.demo{font-size:13.5px;color:#7a5200;background:#fff3d6;border-radius:10px;padding:10px 12px}
+.ok{display:none;background:#e0f3e6;border-radius:12px;padding:14px;font-weight:600}
+.ok.show{display:block}
+
+/* contacts */
+.cont{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.cont dl{display:grid;gap:18px}
+.cont dt{font-size:14px;color:#a9c6c0}
+.cont dd{font:500 22px Rubik,sans-serif}
+.cont dd a{text-decoration:none}
+.cont dd small{display:block;font:400 15px "Golos Text";color:#a9c6c0;margin-block-start:2px}
+
+/* concept note */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;list-style:none;padding:0}
+.cmp li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:15.5px}
+.cmp s{color:var(--coral);display:block;font-size:14px}
+.cmp b{display:block}
+
+footer{background:#0a1f1e;color:#7fa39c;font-size:14px}
+footer .wrap{padding-block:22px 90px}
+
+/* sticky call (mobile) */
+.callbar{display:none}
+
+@media (max-width:860px){
+  .nav{display:none}
+  .sec{padding-block:52px}
+  .hero .wrap{padding-block:44px 0}
+  .quick{grid-template-columns:1fr;margin-block-start:-24px}
+  .two,.pharm,.cont,.docs,.cmp{grid-template-columns:1fr}
+  .two,.pharm,.cont{gap:26px}
+  .head .btn span{display:none}
+  .callbar{display:flex;position:fixed;inset:auto 0 0 0;z-index:30;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(18,48,46,.97)}
+  .callbar a{flex:1}
+  .callbar .btn{min-height:50px;padding-inline:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero::before{animation:none}
+  .pulse path{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">Концепт нового сайта для «Доктор Вет». Подготовил Юрий, <a href="tel:+79995884747">+7 999 588-47-47</a></div></div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Доктор Вет — на главную">
+      <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#12302e"/><path d="M15 8h8v7h7v8h-7v7h-8v-7H8v-8h7z" fill="#f4b73c"/></svg>
+      <span>Доктор Вет<small>ветеринарная клиника</small></span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#uslugi">Услуги</a>
+      <a href="#ceny">Цены</a>
+      <a href="#vrachi">Врачи</a>
+      <a href="#apteka">Аптека</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="btn btn--sun" href="tel:+73512353244" aria-label="Позвонить в клинику">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>8 (351) 235-32-44</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <h1>Лечим кошек, собак и тех, кого не примут в обычной клинике</h1>
+    <p class="sub">Терапия, хирургия, УЗИ и лаборатория. Принимаем шиншилл, игуан, морских свинок и попугаев.</p>
+    <div class="cta">
+      <a class="btn btn--sun" href="tel:+73512353244">Позвонить в клинику</a>
+      <a class="btn btn--line" href="#zapis">Записаться онлайн</a>
+    </div>
+    <svg class="pulse" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 H330 L360 60 L380 20 L410 82 L440 8 L470 60 H700 L725 60 L742 34 L765 70 L785 60 H1200"/></svg>
+  </div>
+  <div class="pets"><div class="wrap">Кошки, собаки, шиншиллы, игуаны, морские свинки, большие и маленькие попугаи, амадины.</div></div>
+</section>
+
+<div class="wrap">
+  <div class="quick">
+    <a class="q" href="tel:+73512353244"><span>Основной телефон</span><b>8 (351) 235-32-44</b></a>
+    <a class="q" href="tel:+79222306222"><span>Мобильный</span><b>8 922 230-62-22</b></a>
+    <a class="q" href="#kontakty"><span>Адрес</span><b>Бр. Кашириных, 118/1</b></a>
+  </div>
+</div>
+
+<section class="sec" id="uslugi">
+  <div class="wrap">
+    <h2>Чем мы лечим</h2>
+    <p class="lead">Профилактика, приём врача, диагностика и операции в одной клинике. Для редких животных приём по предварительной записи.</p>
+    <ul class="svc">
+      <li><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg><h3>Терапия</h3><p>Приём и клинический осмотр, инъекции, капельницы, вакцинация.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M4 20 20 4M14 4l6 6M4 14l6 6"/></svg><h3>Хирургия</h3><p>Кастрация, стерилизация, кесарево сечение, стоматология, обработка ран.</p></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 12h6"/></svg><h3>Дерматология</h3><p>Приём дерматолога, соскобы, лампа Вуда, цитология.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><h3>Репродукция</h3><p>Акушерство и гинекология, УЗИ при беременности.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M2 12h5l2-6 4 12 2-6h7"/></svg><h3>Кардиология и ЭКГ</h3><p>Кардиология и электрокардиография.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0v7H5z"/><path d="M9 12h6"/></svg><h3>УЗИ</h3><p>Брюшная полость, мочевой пузырь, матка, яичники, простата.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg><h3>Лаборатория</h3><p>Анализы крови и мочи, мазки, экспресс-тесты.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 0-5 5v3l-3 3h16l-3-3V8a5 5 0 0 0-5-5zM10 18a2 2 0 0 0 4 0"/></svg><h3>Анестезиология</h3><p>Местная анестезия, седация, анестезиологическое пособие.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg><h3>Диетология</h3><p>Подбор лечебного питания. В аптеке есть лечебные диеты.</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14zM5 19l7-7"/></svg><h3>Экзотические животные и рептилии</h3><p>Грызуны, птицы, рептилии: лечение и консультации по уходу и содержанию.</p></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7"/></svg><h3>Поведение животных</h3><p>Консультации по поведению питомца.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec--ink">
+  <div class="wrap two">
+    <div>
+      <h2>Заболела игуана или шиншилла?</h2>
+      <p class="lead">Врачи принимают редких и экзотических животных и птиц, а также консультируют по уходу и содержанию.</p>
+      <ul class="ex-list"><li>Попугаи</li><li>Грызуны</li><li>Рептилии</li><li>Шиншиллы</li><li>Игуаны</li><li>Морские свинки</li></ul>
+      <a class="btn btn--sun" href="tel:+73512353244">Позвонить и записаться</a>
+    </div>
+    <p class="note">Приём редких животных идёт по предварительной записи. В экстренных случаях врач может проконсультировать по телефону или выехать на дом.</p>
+  </div>
+</section>
+
+<section class="sec" id="ceny">
+  <div class="wrap">
+    <h2>Цены на основные услуги</h2>
+    <p class="lead">Цены из прейскуранта на действующем сайте клиники. Нажмите на раздел, чтобы раскрыть.</p>
+
+    <details open><summary>Приём и вакцинация</summary><ul class="pl">
+      <li><span>Приём и клинический осмотр</span><span>1200 ₽</span></li>
+      <li><span>Приём дерматолога, репродуктолога</span><span>1600 ₽</span></li>
+      <li><span>Оформление международного ветеринарного паспорта</span><span>300 ₽</span></li>
+      <li><span>Вакцинация Мультикан-8 (с осмотром, вакциной, отметкой в паспорте)</span><span>2200 ₽</span></li>
+      <li><span>Вакцинация Рабикс или Рабикан</span><span>1000 ₽</span></li>
+      <li><span>Вакцинация Мультифел-4</span><span>2000 ₽</span></li>
+      <li><span>Мультифел-4 + Рабифел</span><span>2450 ₽</span></li>
+      <li><span>Вакцинация Рабифел</span><span>1000 ₽</span></li>
+    </ul></details>
+
+    <details><summary>Манипуляции и процедуры</summary><ul class="pl">
+      <li><span>Подкожная или внутримышечная инъекция</span><span>100 ₽</span></li>
+      <li><span>Внутривенное введение</span><span>300 ₽</span></li>
+      <li><span>Капельница, за 1 час</span><span>600 ₽</span></li>
+      <li><span>Установка внутривенного катетера</span><span>300 ₽</span></li>
+      <li><span>Стрижка когтей</span><span>300 ₽</span></li>
+      <li><span>Туалет ушной раковины</span><span>600 ₽</span></li>
+      <li><span>Фиксация агрессивного животного</span><span>от 300 ₽</span></li>
+    </ul></details>
+
+    <details><summary>Лаборатория и УЗИ</summary><ul class="pl">
+      <li><span>Общий анализ крови</span><span>от 850 ₽</span></li>
+      <li><span>Биохимический анализ крови</span><span>1800–3500 ₽</span></li>
+      <li><span>Анализ мочи с микроскопией осадка</span><span>600 ₽</span></li>
+      <li><span>Глюкоза в крови (экспресс-тест)</span><span>350 ₽</span></li>
+      <li><span>Соскоб на дерматомикоз или арахнозы</span><span>500 ₽</span></li>
+      <li><span>УЗИ: определение беременности</span><span>1200 ₽</span></li>
+      <li><span>УЗИ органов брюшной полости</span><span>2000 ₽</span></li>
+      <li><span>УЗИ самки или самца</span><span>1200 ₽</span></li>
+    </ul></details>
+
+    <details><summary>Хирургия и анестезия</summary><ul class="pl">
+      <li><span>Кастрация кота (всё включено)</span><span>2500 ₽</span></li>
+      <li><span>Кастрация кобеля, до 5 кг</span><span>от 3000 ₽</span></li>
+      <li><span>Стерилизация кошки</span><span>5000 ₽</span></li>
+      <li><span>Стерилизация суки, до 5 кг</span><span>от 5000 ₽</span></li>
+      <li><span>Кесарево сечение, кошки</span><span>от 7000 ₽</span></li>
+      <li><span>Первичная обработка раны</span><span>400–1000 ₽</span></li>
+      <li><span>Седация</span><span>600 ₽</span></li>
+      <li><span>Анестезиологическое пособие, 30 минут</span><span>1000–2000 ₽</span></li>
+    </ul></details>
+
+    <p class="fine">Цены операций и процедур даны без стоимости препаратов и расходных материалов, кроме отмеченных. Цены, которых нет в прейскуранте, оговариваются с врачом. Перед публикацией цены нужно сверить с клиникой.</p>
+  </div>
+</section>
+
+<section class="sec sec--mint" id="vrachi">
+  <div class="wrap">
+    <h2>Врачи клиники</h2>
+    <p class="lead">Врачи имеют государственное ветеринарное образование, участвуют в семинарах и конференциях и проходят стажировки в других клиниках.</p>
+    <div class="docs">
+      <article class="doc">
+        <h3>Ширко Елизавета Владимировна</h3>
+        <em>Главный ветеринарный врач</em>
+        <p>Хирургия, дерматология, репродукция.</p>
+        <p>Окончила Троицкий аграрный техникум (1999, с отличием) и Уральскую академию ветеринарной медицины (2005). Стажировалась по дерматологии в Москве, проходила обучение по неврологии и репродукции собак и кошек.</p>
+      </article>
+      <article class="doc">
+        <h3>Голубева Татьяна Васильевна</h3>
+        <em>Врач, в клинике с 2005 года</em>
+        <p>Терапия, УЗИ, лабораторная диагностика.</p>
+        <p>Окончила Троицкий аграрный техникум (1998, с отличием) и Уральскую государственную академию ветеринарной медицины (2006). Стажировалась по ультразвуковой и лабораторной диагностике в Екатеринбурге.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="apteka">
+  <div class="wrap pharm">
+    <svg class="cross" viewBox="0 0 200 200" aria-hidden="true"><rect x="8" y="8" width="184" height="184" rx="48" fill="#12302e"/><path d="M78 40h44v38h38v44h-38v38H78v-38H40V78h38z" fill="#f4b73c"/></svg>
+    <div>
+      <h2>Ветеринарная аптека при клинике</h2>
+      <p class="lead">Ветеринарные препараты, витамины и лечебные диеты Purina и Eukanuba, а также игрушки, аксессуары, шампуни, лакомства и корма.</p>
+      <p class="fine">Лицензия № 74-09-000080 от 30 апреля 2009 года на фармацевтическую деятельность в сфере обращения лекарственных средств для животных.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--mint" id="zapis">
+  <div class="wrap two">
+    <div>
+      <h2>Запишитесь за минуту</h2>
+      <p class="lead">Оставьте телефон и имя питомца, администратор перезвонит. Срочно? Нажмите на номер и звоните сразу.</p>
+      <a class="btn btn--sun" href="tel:+73512353244">8 (351) 235-32-44</a>
+    </div>
+    <form class="form" id="f" novalidate>
+      <label>Ваше имя<input name="n" autocomplete="name" placeholder="Анна"></label>
+      <label>Телефон<input name="t" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___-__-__"></label>
+      <label>Питомец<select name="p"><option>Кошка</option><option>Собака</option><option>Грызун</option><option>Птица</option><option>Рептилия</option><option>Другое</option></select></label>
+      <label>Что случилось<textarea name="m" placeholder="Коротко опишите, что беспокоит питомца"></textarea></label>
+      <button class="btn btn--sun" type="submit">Отправить заявку</button>
+      <p class="demo">Демонстрационная форма: в концепте данные никуда не отправляются.</p>
+      <p class="ok" id="ok" role="status">Это демо: в рабочем сайте заявка ушла бы администратору клиники.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec--ink" id="kontakty">
+  <div class="wrap cont">
+    <div>
+      <h2>Как нас найти</h2>
+      <p class="lead">Режим работы уточняйте по телефону.</p>
+      <a class="btn btn--sun" href="https://yandex.ru/maps/?text=%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D0%91%D1%80.%20%D0%9A%D0%B0%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%8B%D1%85%2C%20118%2F1" rel="noopener">Открыть на карте</a>
+    </div>
+    <dl>
+      <div><dt>Адрес</dt><dd>Челябинск, Бр. Кашириных, 118/1</dd></div>
+      <div><dt>Телефоны</dt><dd><a href="tel:+73512353244">8 (351) 235-32-44</a><br><a href="tel:+73512189241">8 (351) 218-92-41</a><br><a href="tel:+79222306222">8 922 230-62-22</a></dd></div>
+      <div><dt>Почта</dt><dd><a href="mailto:doctorvet@bk.ru">doctorvet@bk.ru</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Что изменилось по сравнению со старым сайтом</h2>
+    <p class="lead">Заметка для владельца клиники. В рабочей версии этого блока не будет.</p>
+    <ul class="cmp">
+      <li><s>Было: просроченный сертификат, браузер пугает «не защищено»</s><b>Стало: защищённое соединение HTTPS</b></li>
+      <li><s>Было: сайт 2010 года на таблицах, без адаптации под телефон</s><b>Стало: удобно читается на телефоне</b></li>
+      <li><s>Было: номера просто текстом</s><b>Стало: звонок в один тап, кнопка звонка всегда на экране телефона</b></li>
+      <li><s>Было: записаться можно только письмом на почту</s><b>Стало: форма заявки на странице</b></li>
+      <li><s>Было: цены в длинном списке</s><b>Стало: прейскурант по разделам</b></li>
+      <li><s>Было: опечатка «живоных» в меню</s><b>Стало: тексты вычитаны</b></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Доктор Вет, ветеринарная клиника, Челябинск. Это концепт, не официальный сайт клиники.</div></footer>
+
+<div class="callbar">
+  <a class="btn btn--sun" href="tel:+73512353244">Позвонить</a>
+  <a class="btn btn--line" style="border-color:#6f9a93;color:#fff" href="#zapis">Записаться</a>
+</div>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').classList.add('show')});
+</script>
+</body>
+</html>
