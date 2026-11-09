@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; script-src 'unsafe-inline'; form-action 'none'; base-uri 'none'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Бухсолюшенс — бухгалтерский аутсорсинг в Челябинске</title>
+<meta name="description" content="Ведение бухгалтерского и налогового учёта для ООО и ИП в Челябинске. Учёт ведут действующие аудиторы. От 1 500 ₽.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F6F0;
+  --paper-deep:#EDEFE5;
+  --ink:#1E2A23;
+  --green:#2E6B4F;
+  --green-deep:#1E4A36;
+  --rule:#D6DBCC;
+  --rule-strong:#B9C2AC;
+  --red:#B8433C;
+  --muted:#5F6B62;
+  --serif:'PT Serif',Georgia,serif;
+  --sans:'Golos Text',system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
+section{padding-block:64px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.25}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:14px}
+.lead{color:var(--muted);max-width:60ch}
+a{color:var(--green-deep)}
+
+/* ── Верхняя полоска концепта ── */
+.concept-bar{
+  background:var(--green-deep);
+  color:#EDF3EC;
+  font-size:13.5px;
+  padding-block:9px;
+  text-align:center;
+}
+.concept-bar a{color:#fff;font-weight:600;text-decoration:none}
+.concept-bar a:hover{text-decoration:underline}
+
+/* ── Шапка ── */
+header.site{
+  border-bottom:1px solid var(--rule-strong);
+  background:var(--paper);
+  position:sticky;top:0;z-index:50;
+}
+.site-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand svg{flex:none}
+.brand b{font-family:var(--serif);font-size:21px;letter-spacing:.2px;display:block;line-height:1.1}
+.brand span{font-size:12.5px;color:var(--muted);display:block}
+.top-phone{font-weight:600;text-decoration:none;font-size:16.5px;white-space:nowrap}
+.top-phone:hover{color:var(--red)}
+@media(max-width:640px){.brand span{display:none}.top-phone{font-size:15px}}
+
+/* ── Герой ── */
+.hero{padding-block:56px 64px;position:relative;overflow:hidden}
+.hero::before{ /* линованная бумага */
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(to bottom,transparent 0 35px,rgba(30,42,35,.055) 35px 36px);
+  pointer-events:none;
+}
+.hero-in{position:relative}
+.hero h1{font-size:clamp(30px,5.2vw,52px);max-width:24ch;margin-bottom:18px}
+.hero .lead{font-size:clamp(16.5px,2vw,19px);margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:16px;
+  padding-block:13px;padding-inline:26px;border-radius:6px;
+  border:1.5px solid var(--green-deep);
+}
+.btn-solid{background:var(--green-deep);color:#fff}
+.btn-solid:hover{background:var(--green)}
+.btn-ghost{color:var(--green-deep);background:transparent}
+.btn-ghost:hover{background:var(--paper-deep)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+/* ── Лист бухгалтерской книги ── */
+.ledger{
+  background:#FBFCF8;
+  border:1px solid var(--rule-strong);
+  border-radius:4px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 1px 0 rgba(30,42,35,.06);
+}
+.ledger::before{ /* красная маргинальная линия */
+  content:"";position:absolute;top:0;bottom:0;left:52px;width:1.5px;background:var(--red);opacity:.55;
+}
+.ledger::after{ /* горизонтальные линейки */
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(to bottom,transparent 0 47px,rgba(30,42,35,.05) 47px 48px);
+  pointer-events:none;
+}
+.lrow{
+  display:grid;grid-template-columns:150px 1fr;gap:8px 0;
+  padding-block:15px;padding-inline:70px 26px;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+.lrow:last-child{border-bottom:none}
+.lrow dt{font-size:14px;color:var(--muted);font-weight:600;padding-top:3px}
+.lrow dd{font-family:var(--serif);font-size:clamp(16.5px,2.2vw,20px);line-height:1.45}
+.lrow dd small{display:block;font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:3px}
+.lnum{position:absolute;left:18px;top:17px;font-size:12.5px;color:var(--red);font-family:var(--sans);opacity:.8}
+@media(max-width:640px){
+  .ledger::before{left:38px}
+  .lrow{grid-template-columns:1fr;padding-inline:52px 16px;padding-block:13px}
+  .lnum{left:12px;top:15px}
+}
+
+/* появление строк — единственное оживление */
+.reveal{opacity:0;transform:translateY(10px);animation:rise .6s ease forwards}
+.reveal.d1{animation-delay:.15s}.reveal.d2{animation-delay:.3s}.reveal.d3{animation-delay:.45s}.reveal.d4{animation-delay:.6s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+  .reveal{animation:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ── Услуги ── */
+#services{background:var(--paper-deep);border-block:1px solid var(--rule)}
+.svc-list{margin-top:26px;border-top:1.5px solid var(--rule-strong)}
+.svc{
+  display:grid;grid-template-columns:1fr 1fr;gap:4px 40px;
+  padding-block:20px;border-bottom:1px solid var(--rule-strong);
+}
+.svc h3{font-size:19px}
+.svc h3 svg{vertical-align:-3px;margin-right:10px}
+.svc p{color:var(--muted);font-size:15.5px}
+@media(max-width:760px){.svc{grid-template-columns:1fr}}
+
+/* ── Цена ── */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;border:1.5px solid var(--rule-strong);border-radius:4px;background:#FBFCF8;overflow:hidden}
+.price-cell{padding-block:26px;padding-inline:26px;border-left:1px solid var(--rule-strong)}
+.price-cell:first-child{border-left:none}
+.price-cell .num{font-family:var(--serif);font-size:clamp(24px,3.2vw,32px);font-weight:700;color:var(--green-deep);display:block;margin-bottom:6px}
+.price-cell .num em{font-style:normal;font-size:.55em;font-weight:400;color:var(--muted)}
+.price-cell p{font-size:14.5px;color:var(--muted)}
+@media(max-width:760px){
+  .price-grid{grid-template-columns:1fr}
+  .price-cell{border-left:none;border-top:1px solid var(--rule-strong)}
+  .price-cell:first-child{border-top:none}
+}
+
+/* ── Почему цена честная ── */
+#honest{background:var(--green-deep);color:#E9F0E8}
+#honest h2{color:#fff}
+#honest .lead{color:#BCCDBD}
+.why{margin-top:26px;border-top:1px solid rgba(233,240,232,.25)}
+.why-item{display:grid;grid-template-columns:1fr 1.4fr;gap:4px 40px;padding-block:17px;border-bottom:1px solid rgba(233,240,232,.18)}
+.why-item b{font-weight:600}
+.why-item span{color:#BCCDBD;font-size:15.5px}
+@media(max-width:760px){.why-item{grid-template-columns:1fr}}
+
+/* ── Доверие ── */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 56px;margin-top:30px}
+.trust-item{display:flex;gap:16px}
+.trust-item svg{flex:none;margin-top:4px}
+.trust-item b{display:block;font-size:16.5px;margin-bottom:3px}
+.trust-item p{font-size:15px;color:var(--muted)}
+@media(max-width:760px){.trust-grid{grid-template-columns:1fr}}
+
+/* ── Контакты и форма ── */
+#contact{background:var(--paper-deep);border-top:1px solid var(--rule)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:26px}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.cline{display:flex;gap:14px;padding-block:14px;border-bottom:1px solid var(--rule-strong);align-items:baseline}
+.cline svg{flex:none;align-self:center}
+.cline .lbl{font-size:13px;color:var(--muted);min-width:92px}
+.cline a{font-weight:600;text-decoration:none;font-size:17px}
+.cline a:hover{color:var(--red)}
+.addr{font-weight:500}
+.phones-list{display:flex;flex-direction:column;gap:4px}
+.phones-list a{font-size:17px}
+
+form{background:#FBFCF8;border:1.5px solid var(--rule-strong);border-radius:4px;padding-block:28px;padding-inline:28px}
+form h3{font-size:22px;margin-bottom:6px}
+.form-note{font-size:13px;color:var(--muted);margin-bottom:20px}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px}
+.fld input,.fld textarea{
+  width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--rule-strong);border-radius:4px;
+  padding-block:11px;padding-inline:13px;
+}
+.fld input:focus,.fld textarea:focus{outline:2px solid var(--green);border-color:var(--green)}
+.fld textarea{min-height:96px;resize:vertical}
+form .btn{width:100%;text-align:center;border-radius:4px;cursor:pointer}
+
+/* ── Подвал ── */
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
+footer .wrap{border-top:1px solid var(--rule-strong);padding-top:32px}
+footer p{margin-bottom:4px}
+footer a{color:var(--muted)}
+
+/* ── Липкая кнопка звонка на телефоне ── */
+.callbar{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--green-deep);
+  padding-block:12px;padding-inline:20px;
+  padding-bottom:calc(12px + env(safe-area-inset-bottom));
+}
+.callbar a{
+  display:block;text-align:center;color:#fff;text-decoration:none;
+  font-weight:700;font-size:17px;
+}
+.callbar a span{display:block;font-size:12px;font-weight:400;color:#BCCDBD}
+@media(max-width:640px){.callbar{display:block}footer{padding-bottom:84px}}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  Концепт нового сайта для «Бухсолюшенс». Подготовил Юрий, <a href="tel:+79995884747">+7 999 588-47-47</a>
+</div>
+
+<header class="site">
+  <div class="wrap site-in">
+    <a class="brand" href="#top" aria-label="Бухсолюшенс — на главную">
+      <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Знак «Бухсолюшенс»: лист бухгалтерской книги">
+        <rect x="2" y="2" width="36" height="36" rx="3" fill="#1E4A36"/>
+        <line x1="9" y1="12" x2="31" y2="12" stroke="#E9F0E8" stroke-width="1.6"/>
+        <line x1="9" y1="19" x2="31" y2="19" stroke="#E9F0E8" stroke-width="1.6"/>
+        <line x1="9" y1="26" x2="24" y2="26" stroke="#E9F0E8" stroke-width="1.6"/>
+        <line x1="15" y1="4" x2="15" y2="36" stroke="#B8433C" stroke-width="1.6"/>
+      </svg>
+      <span><b>Бухсолюшенс</b><span>бухгалтерская фирма · Челябинск</span></span>
+    </a>
+    <a class="top-phone" href="tel:+79026187351">+7 902 618-73-51</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-in">
+    <h1 id="hero-h" class="reveal">Вашу бухгалтерию ведут действующие аудиторы</h1>
+    <p class="lead reveal d1">Бухгалтерский и налоговый учёт на аутсорсинге для ООО и ИП в Челябинске и области. Документы — по электронной почте, отчётность — в срок.</p>
+    <div class="hero-actions reveal d2">
+      <a class="btn btn-solid" href="#contact">Обсудить задачу</a>
+      <a class="btn btn-ghost" href="tel:+79026187351">Позвонить: +7 902 618-73-51</a>
+    </div>
+
+    <dl class="ledger reveal d3" aria-label="Факты о фирме в форме бухгалтерской книги">
+      <div class="lrow"><span class="lnum" aria-hidden="true">01</span><dt>Кто ведёт учёт</dt><dd>Действующие аудиторы с квалификационными аттестатами<small>Сами ведут учёт и сами формируют отчётность — без передачи третьим лицам</small></dd></div>
+      <div class="lrow"><span class="lnum" aria-hidden="true">02</span><dt>Опыт</dt><dd>25 лет проверяем и ведём учёт<small>Фирма прошла проверку контроля качества работы на «отлично»</small></dd></div>
+      <div class="lrow"><span class="lnum" aria-hidden="true">03</span><dt>Коллектив</dt><dd>7 человек с огромным опытом<small>Каждый может заменить каждого — ваш бухгалтер всегда на месте</small></dd></div>
+      <div class="lrow"><span class="lnum" aria-hidden="true">04</span><dt>Стоимость</dt><dd>от 1 500 ₽<small>Цена понятна и зависит от объёма работы и сложности задач</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <h2 id="svc-h">Что мы делаем</h2>
+    <p class="lead">Полный набор задач штатной бухгалтерии — от первичной документации до сдачи отчётности. Для организаций и предпринимателей.</p>
+    <div class="svc-list">
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Аутсорсинг бухгалтерских услуг</h3>
+        <p>Выполняем все задачи штатной бухгалтерии: от внесения первичной документации и формирования платёжных документов до сдачи всей необходимой отчётности, планирования и оптимизации процессов.</p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Ведение бухгалтерского и налогового учёта</h3>
+        <p>Ведём налоговый, бухгалтерский и кадровый учёт организации и ИП удалённо. Документы получаем по электронной почте или удобным вам способом в установленном графике.</p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Аутсорсинг заработной платы</h3>
+        <p>Начисление заработной платы сотрудникам.</p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Бухгалтерские услуги под ключ</h3>
+        <p>Полное ведение учёта, включая кадровый и воинский учёт отдельными услугами.</p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Постановка бухгалтерского учёта</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Восстановление бухгалтерского и налогового учёта</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Помощь в выборе системы налогообложения</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Регистрация фирм</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Налоговая оптимизация</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Услуги кадрового учёта</h3>
+        <p></p>
+      </div>
+      <div class="svc">
+        <h3><svg width="17" height="17" viewBox="0 0 17 17" role="img" aria-label="" aria-hidden="true"><rect x="1" y="1" width="15" height="15" fill="none" stroke="#2E6B4F" stroke-width="2"/><rect x="5" y="5" width="7" height="7" fill="#2E6B4F"/></svg>Услуги воинского учёта</h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price" aria-labelledby="price-h">
+  <div class="wrap">
+    <h2 id="price-h">Сколько это стоит</h2>
+    <p class="lead">Цена в рублях, известна заранее и не меняется по ходу работы.</p>
+    <div class="price-grid">
+      <div class="price-cell"><span class="num">от 1 500 <em>₽</em></span><p>Стартовая цена бухгалтерских услуг</p></div>
+      <div class="price-cell"><span class="num">от 100 <em>документов</em></span><p>Отсчёт объёма работы</p></div>
+      <div class="price-cell"><span class="num">Тариф — <em>по задаче</em></span><p>Рассчитывается индивидуально: зависит от количества документов и их сложности</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="honest" aria-labelledby="honest-h">
+  <div class="wrap">
+    <h2 id="honest-h">Почему цена невысокая</h2>
+    <p class="lead">Мы не экономим на качестве учёта. Ниже — из чего складывается наша цена.</p>
+    <div class="why">
+      <div class="why-item"><b>Помещение офиса — наше</b><span>Не платим за аренду, и вы не оплачиваете её в цене услуг.</span></div>
+      <div class="why-item"><b>Без лишнего штата</b><span>Не содержим администраторов и лишних сотрудников.</span></div>
+      <div class="why-item"><b>Не платим за рекламу</b><span>Наша реклама — довольные клиенты и этот сайт.</span></div>
+      <div class="why-item"><b>Взаимозаменяемый коллектив</b><span>Высокая квалификация каждого позволяет подхватить любую задачу без потери срока.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <h2 id="trust-h">Почему нам можно доверять</h2>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" role="img" aria-label="Значок аттестата"><circle cx="13" cy="13" r="11.5" fill="none" stroke="#2E6B4F" stroke-width="2"/><path d="M8 13.5l3.5 3.5L18.5 10" fill="none" stroke="#2E6B4F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>Аттестованные аудиторы</b><p>Учёт ведут и отчётность формируют действующие аудиторы с квалификационными аттестатами. Квалификация подтверждена дипломами и сертификатами.</p></div>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" role="img" aria-label="Значок проверки"><rect x="3" y="2.5" width="20" height="21" rx="2" fill="none" stroke="#2E6B4F" stroke-width="2"/><line x1="7.5" y1="9" x2="18.5" y2="9" stroke="#2E6B4F" stroke-width="2"/><line x1="7.5" y1="14" x2="18.5" y2="14" stroke="#2E6B4F" stroke-width="2"/><line x1="7.5" y1="19" x2="14" y2="19" stroke="#2E6B4F" stroke-width="2"/></svg>
+        <div><b>Проверка контроля качества — «отлично»</b><p>Организация на отлично прошла проверку контроля качества работы.</p></div>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" role="img" aria-label="Значок замка"><rect x="5" y="11" width="16" height="12" rx="2" fill="none" stroke="#2E6B4F" stroke-width="2"/><path d="M8.5 11V8a4.5 4.5 0 0 1 9 0v3" fill="none" stroke="#2E6B4F" stroke-width="2"/><circle cx="13" cy="17" r="2" fill="#2E6B4F"/></svg>
+        <div><b>Конфиденциальность — в договоре</b><p>Договор включает дополнительное соглашение о конфиденциальности: сохранность вашей информации гарантирована.</p></div>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" role="img" aria-label="Значок документа"><path d="M6 2.5h9l5 5V23.5H6z" fill="none" stroke="#2E6B4F" stroke-width="2" stroke-linejoin="round"/><path d="M15 2.5v5h5" fill="none" stroke="#2E6B4F" stroke-width="2" stroke-linejoin="round"/><line x1="9.5" y1="13" x2="17.5" y2="13" stroke="#2E6B4F" stroke-width="2"/><line x1="9.5" y1="17" x2="15" y2="17" stroke="#2E6B4F" stroke-width="2"/></svg>
+        <div><b>Все документы — в графике</b><p>Документы получаем по электронной почте или удобным вам способом в установленном графике. Вам не нужно ездить в офис.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Обсудим вашу задачу</h2>
+    <p class="lead">Позвоните или оставьте заявку — рассчитаем стоимость по вашим документам.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="cline">
+          <svg width="20" height="20" viewBox="0 0 20 20" role="img" aria-label="Телефон"><path d="M4 2.5h3.5l1.8 4.5-2.3 1.8a12 12 0 0 0 4.2 4.2l1.8-2.3 4.5 1.8V16a1.8 1.8 0 0 1-1.8 1.8C8.6 17.8 2.2 11.4 2.2 4.3A1.8 1.8 0 0 1 4 2.5z" fill="none" stroke="#2E6B4F" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span class="lbl">Телефоны</span>
+          <span class="phones-list">
+            <a href="tel:+79026187351">+7 902 618-73-51</a>
+            <a href="tel:+73512700244">8 (351) 270-02-44</a>
+            <a href="tel:+79080429235">+7 908 042-92-35</a>
+          </span>
+        </div>
+        <div class="cline">
+          <svg width="20" height="20" viewBox="0 0 20 20" role="img" aria-label="Почта"><rect x="2" y="4" width="16" height="12" rx="1.5" fill="none" stroke="#2E6B4F" stroke-width="1.8"/><path d="M2.5 5.5L10 11l7.5-5.5" fill="none" stroke="#2E6B4F" stroke-width="1.8"/></svg>
+          <span class="lbl">Почта</span>
+          <a href="mailto:zakaz@fenics-audit.ru">zakaz@fenics-audit.ru</a>
+        </div>
+        <div class="cline">
+          <svg width="20" height="20" viewBox="0 0 20 20" role="img" aria-label="Адрес"><path d="M10 18.5S4 12.6 4 8.2a6 6 0 1 1 12 0c0 4.4-6 10.3-6 10.3z" fill="none" stroke="#2E6B4F" stroke-width="1.8"/><circle cx="10" cy="8.2" r="2.2" fill="none" stroke="#2E6B4F" stroke-width="1.8"/></svg>
+          <span class="lbl">Адрес</span>
+          <span class="addr">г. Челябинск, ул. Энгельса, 47Б, офис 24</span>
+        </div>
+      </div>
+
+      <form aria-label="Заявка">
+        <h3>Оставить заявку</h3>
+        <p class="form-note">Демонстрационная форма: на рабочем сайте заявка будет уходить на почту zakaz@fenics-audit.ru.</p>
+        <div class="fld">
+          <label for="f-name">Как вас зовут</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="fld">
+          <label for="f-phone">Телефон</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="fld">
+          <label for="f-task">Задача</label>
+          <textarea id="f-task" name="task" placeholder="Например: ведение учёта ООО, около 150 документов в месяц"></textarea>
+        </div>
+        <button class="btn btn-solid" type="button">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>ООО «Бухсолюшенс» · бухгалтерская фирма, Челябинск</p>
+    <p>ИНН 7447322811 · КПП 745301001 · ОГРН 1257400019348</p>
+    <p>454080, г. Челябинск, ул. Энгельса, дом 47-Б, офис 24</p>
+    <p><a href="tel:+79026187351">+7 902 618-73-51</a> · <a href="tel:+73512700244">8 (351) 270-02-44</a> · <a href="tel:+79080429235">+7 908 042-92-35</a> · <a href="mailto:zakaz@fenics-audit.ru">zakaz@fenics-audit.ru</a></p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+79026187351">Позвонить<span>+7 902 618-73-51</span></a>
+</div>
+
+</body>
+</html>
