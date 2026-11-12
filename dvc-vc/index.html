@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; script-src 'unsafe-inline'; form-action 'none'; base-uri 'none'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Стоматология Da Vinci — Челябинск, ул. Братьев Кашириных, 154</title>
+<meta name="description" content="Стоматологическая клиника Da Vinci в Челябинске: лечение, имплантация, виниры, брекеты и Invisalign. Своя зуботехническая лаборатория. Онлайн-запись и запись по телефону.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F2EB;
+  --card:#FDFCF9;
+  --ink:#212A3E;
+  --ink-soft:#4A5468;
+  --gold:#A87C2E;
+  --gold-deep:#8A6423;
+  --line:rgba(33,42,62,.15);
+  --line-soft:rgba(33,42,62,.09);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Golos Text',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.6;
+}
+h1,h2,.serif{font-family:'Cormorant',serif;font-weight:500;line-height:1.15}
+h2{font-size:clamp(30px,4.4vw,44px)}
+a{color:inherit}
+img,svg{max-width:100%}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(18px,4vw,32px)}
+section{background:transparent}
+.wrap{padding-block:clamp(56px,8vw,104px)}
+
+/* ---------- концепт-плашка ---------- */
+.concept-bar{
+  background:var(--ink);
+  color:#EDE7D8;
+  font-size:13.5px;
+  padding-block:9px;
+  text-align:center;
+}
+.concept-bar a{color:#D9B96A;text-decoration:none;font-weight:500}
+.concept-bar a:hover{text-decoration:underline}
+
+/* ---------- шапка ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(245,242,235,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line-soft);
+}
+.site-in{
+  max-width:1120px;margin-inline:auto;
+  padding-block:12px;
+  display:flex;align-items:center;gap:18px;
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:34px;flex:none}
+.logo b{font-family:'Cormorant',serif;font-weight:600;font-size:22px;letter-spacing:.2px}
+.logo span{font-size:12px;color:var(--ink-soft);display:block;margin-top:-4px}
+nav.top{margin-left:auto;display:flex;gap:22px;font-size:15px}
+nav.top a{text-decoration:none;color:var(--ink-soft)}
+nav.top a:hover{color:var(--ink)}
+.head-phone{text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap}
+.btn{
+  display:inline-block;
+  background:var(--ink);color:#F5F2EB;
+  text-decoration:none;border:none;cursor:pointer;
+  font:inherit;font-size:16px;font-weight:500;
+  padding:12px 22px;border-radius:999px;
+  transition:background .2s;
+}
+.btn:hover{background:var(--gold-deep)}
+.btn.gold{background:var(--gold)}
+.btn.gold:hover{background:var(--gold-deep)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:rgba(33,42,62,.05)}
+.btn.sm{padding:9px 18px;font-size:15px}
+
+/* ---------- hero ---------- */
+.hero .wrap{padding-block:clamp(48px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:500}
+.hero h1 em{font-style:italic;color:var(--gold-deep)}
+.hero p.lead{margin-block-start:20px;max-width:34em;color:var(--ink-soft);font-size:18px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-block-start:30px}
+.hero-note{margin-block-start:14px;font-size:14.5px;color:var(--ink-soft)}
+.hero-note a{color:var(--gold-deep);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(168,124,46,.4)}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block}
+.fade{opacity:0;transform:translateY(14px);animation:rise .8s ease forwards}
+.fade.d1{animation-delay:.1s}.fade.d2{animation-delay:.22s}.fade.d3{animation-delay:.34s}.fade.d4{animation-delay:.46s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .fade{animation:none;opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- факты ---------- */
+.facts{border-block:1px solid var(--line-soft);background:var(--card)}
+.facts .wrap{padding-block:34px}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.fact .serif{font-size:26px;font-weight:600;color:var(--gold-deep)}
+.fact p{font-size:14.5px;color:var(--ink-soft);margin-block-start:2px}
+
+/* ---------- услуги ---------- */
+.svc-head{max-width:36em}
+.svc-head p{margin-block-start:12px;color:var(--ink-soft)}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;margin-block-start:40px;
+}
+.svc{
+  background:var(--card);border:1px solid var(--line-soft);
+  border-radius:var(--radius);
+  padding:24px 24px 20px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.svc h3{font-family:'Cormorant',serif;font-weight:600;font-size:23px}
+.svc p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.svc .price{font-weight:600;color:var(--gold-deep);font-size:16px}
+.svc.feature{background:var(--ink);color:#EDE7D8;border-color:transparent}
+.svc.feature h3{color:#F5F2EB}
+.svc.feature p{color:#B9C0CE}
+.svc.feature .price{color:#D9B96A}
+.svc.feature .tag{
+  display:inline-block;font-size:13px;color:#D9B96A;
+  border:1px solid rgba(217,185,106,.45);border-radius:999px;
+  padding:3px 12px;margin-block-end:6px;width:fit-content;
+}
+.price-note{margin-block-start:18px;font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- первый визит ---------- */
+.visit{background:var(--card);border-block:1px solid var(--line-soft)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,48px);margin-block-start:40px}
+.step .num{
+  font-family:'Cormorant',serif;font-style:italic;font-size:44px;
+  color:var(--gold);line-height:1;
+}
+.step h3{font-size:18px;font-weight:600;margin-block-start:10px}
+.step p{font-size:14.5px;color:var(--ink-soft);margin-block-start:6px}
+
+/* ---------- запись ---------- */
+.book .wrap{padding-block:clamp(48px,7vw,88px)}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.book h2 em{font-style:italic;color:var(--gold-deep)}
+.book-side p{color:var(--ink-soft);margin-block-start:14px;max-width:32em}
+.wa-card{
+  margin-block-start:26px;background:var(--card);
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:20px 22px;font-size:15px;
+}
+.wa-card b{font-size:16px}
+.wa-card a{color:var(--gold-deep);font-weight:600;text-decoration:none}
+form.book-form{
+  background:var(--ink);color:#EDE7D8;
+  border-radius:var(--radius);padding:clamp(24px,3vw,36px);
+}
+form.book-form label{display:block;font-size:14px;margin-block-start:16px;color:#B9C0CE}
+form.book-form label:first-child{margin-block-start:0}
+form.book-form input,form.book-form select{
+  width:100%;margin-block-start:6px;
+  background:rgba(245,242,235,.08);
+  border:1px solid rgba(237,231,216,.25);
+  border-radius:10px;color:#F5F2EB;
+  font:inherit;font-size:16px;padding:12px 14px;
+}
+form.book-form select option{color:var(--ink)}
+form.book-form input:focus,form.book-form select:focus{
+  outline:2px solid var(--gold);outline-offset:1px;
+}
+form.book-form .btn{margin-block-start:22px;width:100%}
+.form-note{font-size:13px;color:#A6ADBC;margin-block-start:14px}
+
+/* ---------- контакты ---------- */
+.contacts{background:var(--card);border-block:1px solid var(--line-soft)}
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,44px);margin-block-start:40px}
+.c-item h3{font-size:15px;font-weight:600;color:var(--ink-soft)}
+.c-item p{margin-block-start:6px;font-size:17px}
+.c-item a{text-decoration:none;font-weight:600}
+.c-item a:hover{color:var(--gold-deep)}
+.c-item .sub{font-size:14px;color:var(--ink-soft);font-weight:400}
+
+/* ---------- футер ---------- */
+footer .wrap{padding-block:34px;font-size:14px;color:var(--ink-soft);display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+
+/* ---------- мобильная панель звонка ---------- */
+.mobile-call{display:none}
+
+@media (max-width:900px){
+  nav.top{display:none}
+  .hero-grid,.book-grid{grid-template-columns:1fr}
+  .hero-art{max-width:420px;margin-inline:auto}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .facts-grid{grid-template-columns:repeat(2,1fr)}
+  .steps,.c-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .head-phone{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .facts-grid{grid-template-columns:1fr 1fr;gap:18px}
+  body{padding-block-end:64px}
+  .mobile-call{
+    display:block;position:fixed;inset-block-end:0;inset-inline:0;z-index:60;
+    background:rgba(33,42,62,.97);backdrop-filter:blur(6px);
+    padding-block:10px;padding-inline:16px;
+  }
+  .mobile-call a{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    color:#F5F2EB;text-decoration:none;font-weight:600;font-size:17px;
+  }
+  .mobile-call svg{width:20px;height:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  Концепт нового сайта для «Стоматологическая клиника Da Vinci». Подготовил Юрий, <a href="tel:+79995884747">+7 999 588-47-47</a>
+</div>
+
+<header class="site">
+  <div class="site-in wrap" style="padding-block:12px">
+    <a class="logo" href="#top" aria-label="Стоматология Da Vinci — на главную">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#A87C2E" stroke-width="1.4"/>
+        <path d="M12 27c0-7 2-14 8-14s8 7 8 14" stroke="#212A3E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M20 13v14" stroke="#A87C2E" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <b>Da Vinci</b><span>стоматология</span>
+    </a>
+    <nav class="top" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#visit">Первый визит</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="head-phone" href="tel:+73512003699">+7 (351) 200-36-99</a>
+    <a class="btn gold sm" href="#book">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1 class="fade d1">Улыбка — <em>ремесло</em>.<br>Точность — искусство.</h1>
+        <p class="lead fade d2">Стоматологическая клиника в Челябинске. Работаем с 2008 года, делаем протезы в собственной зуботехнической лаборатории и снимаем рентген с анализом на основе искусственного интеллекта.</p>
+        <div class="hero-actions fade d3">
+          <a class="btn gold" href="#book">Записаться на приём</a>
+          <a class="btn ghost" href="tel:+73512003699">+7 (351) 200-36-99</a>
+        </div>
+        <p class="hero-note fade d4">Нужны новые зубы за один день? Смотрите <a href="#all-on-4">имплантацию All-on-4/6</a>.</p>
+      </div>
+      <div class="hero-art fade d2" aria-hidden="true">
+        <svg viewBox="0 0 420 380" fill="none">
+          <!-- конструкционные линии в духе эскизов Леонардо -->
+          <circle cx="210" cy="190" r="168" stroke="#A87C2E" stroke-width="1" opacity=".35"/>
+          <circle cx="210" cy="190" r="128" stroke="#212A3E" stroke-width="1" opacity=".18"/>
+          <circle cx="210" cy="190" r="84" stroke="#212A3E" stroke-width="1" opacity=".12"/>
+          <line x1="42" y1="190" x2="378" y2="190" stroke="#212A3E" stroke-width="1" opacity=".14"/>
+          <line x1="210" y1="22" x2="210" y2="358" stroke="#212A3E" stroke-width="1" opacity=".14"/>
+          <!-- дуга улыбки -->
+          <path d="M64 210 Q210 330 356 210" stroke="#212A3E" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- зубы по дуге -->
+          <g stroke="#212A3E" stroke-width="1.6">
+            <path d="M64 210 q6 30 17 34 q11 -4 17 -34" fill="#FDFCF9"/>
+            <path d="M98 234 q6 32 17 36 q11 -4 17 -36" fill="#FDFCF9"/>
+            <path d="M132 254 q6 34 18 38 q12 -4 18 -38" fill="#FDFCF9"/>
+            <path d="M168 268 q7 36 21 40 q14 -4 21 -40" fill="#FDFCF9"/>
+            <path d="M210 273 q7 36 21 40 q14 -4 21 -40" fill="#FDFCF9"/>
+            <path d="M252 268 q6 34 18 38 q12 -4 18 -38" fill="#FDFCF9"/>
+            <path d="M288 254 q6 32 17 36 q11 -4 17 -36" fill="#FDFCF9"/>
+            <path d="M322 234 q6 30 17 34 q11 -4 17 -34" fill="#FDFCF9"/>
+            <path d="M64 210 q11 -9 34 -13 M98 234 q11 -11 34 -14 M132 254 q12 -12 36 -13 M168 268 q14 -12 42 -12 M252 268 q-14 -12 -42 -12 M288 254 q-12 -12 -36 -13 M322 234 q-11 -11 -34 -14 M356 210 q-23 -9 -34 -13" fill="none"/>
+          </g>
+          <!-- штриховка и зеркальная подпись -->
+          <g stroke="#A87C2E" stroke-width="1" opacity=".5">
+            <path d="M118 118 l14 -14 M132 132 l24 -24 M156 148 l30 -30"/>
+          </g>
+          <text x="210" y="70" text-anchor="middle" font-family="Cormorant, serif" font-style="italic" font-size="19" fill="#A87C2E" opacity=".8" transform="translate(420,0) scale(-1,1)">da vinci dent</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФАКТЫ -->
+<section class="facts">
+  <div class="wrap">
+    <div class="facts-grid">
+      <div class="fact"><div class="serif">с 2008</div><p>года в Челябинске</p></div>
+      <div class="fact"><div class="serif">Своя</div><p>зуботехническая лаборатория</p></div>
+      <div class="fact"><div class="serif">5.0</div><p>рейтинг в 2ГИС — 181 оценка</p></div>
+      <div class="fact"><div class="serif">Рентген</div><p>с расшифровкой на основе ИИ</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- УСЛУГИ -->
+<section id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2>Что мы делаем</h2>
+      <p>От профилактической гигиены до полного восстановления зубов. Цены — по прайсу клиники, итоговая стоимость зависит от плана лечения.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc feature" id="all-on-4">
+        <span class="tag">Все зубы за 1 день</span>
+        <h3>Имплантация All-on-4/6</h3>
+        <p>Полный протез на 4 или 6 имплантах. Устанавливаем за один визит — без долгого лечения по этапам.</p>
+        <span class="price">от 230 000 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Лечение кариеса</h3>
+        <p>Убираем кариес и восстанавливаем форму зуба пломбой в цвет эмали.</p>
+        <span class="price">от 3 850 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Лечение пульпита</h3>
+        <p>Чистим и пломбируем каналы, снимаем боль и сохраняем зуб.</p>
+      </article>
+      <article class="svc">
+        <h3>Гигиена Air-flow</h3>
+        <p>Бережная чистка от налёта и зубного камня струёй воды и воздуха.</p>
+        <span class="price">от 2 900 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Виниры</h3>
+        <p>Тонкие накладки на передние зубы. Выравнивают цвет и форму улыбки.</p>
+        <span class="price">от 18 000 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Коронки</h3>
+        <p>Восстанавливаем разрушенный зуб. Изготавливаем в своей лаборатории.</p>
+        <span class="price">от 12 750 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Имплантация</h3>
+        <p>Ставим имплант на место отсутствующего зуба вместе с коронкой.</p>
+      </article>
+      <article class="svc">
+        <h3>Брекеты</h3>
+        <p>Классическая система для выравнивания зубного ряда у детей и взрослых.</p>
+        <span class="price">от 35 000 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Invisalign</h3>
+        <p>Прозрачные элайнеры вместо брекетов. Снимаются на время еды.</p>
+        <span class="price">от 267 000 ₽</span>
+      </article>
+      <article class="svc">
+        <h3>Рентген с ИИ</h3>
+        <p>Снимок с автоматической расшифровкой: программа помогает врачу не пропустить скрытые проблемы.</p>
+      </article>
+    </div>
+    <p class="price-note">Цены указаны «от» и не являются публичной офертой. Точную стоимость назовёт врач после осмотра.</p>
+  </div>
+</section>
+
+<!-- ПЕРВЫЙ ВИЗИТ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <h2>Как проходит первый визит</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Запись</h3>
+        <p>Оставьте заявку на сайте или позвоните. Администратор подберёт удобное время.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Осмотр и рентген</h3>
+        <p>Врач осматривает полость рта и при необходимости делает рентген с ИИ-расшифровкой.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>План и стоимость</h3>
+        <p>Врач объясняет, что с зубами, и называет варианты лечения с точной ценой до начала работы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЗАПИСЬ -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="book-grid">
+      <div class="book-side">
+        <h2>Запишитесь <em>онлайн</em> — без звонка</h2>
+        <p>Оставьте имя и телефон. Администратор перезвонит и предложит свободное время. Если неудобно ждать — напишите в WhatsApp, ответим там же.</p>
+        <div class="wa-card">
+          <b>Предпочитаете мессенджер?</b><br>
+          Напишите нам в WhatsApp: <a href="https://wa.me/73512003699">+7 351 200-36-99</a>
+        </div>
+      </div>
+      <form class="book-form" onsubmit="return false" aria-label="Форма записи на приём">
+        <label>Ваше имя
+          <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться">
+        </label>
+        <label>Телефон
+          <input type="tel" name="phone" autocomplete="tel" placeholder="+7 ___ ___-__-__" required>
+        </label>
+        <label>Что беспокоит
+          <select name="service">
+            <option>Пока не знаю — нужен осмотр</option>
+            <option>Лечение кариеса или пульпита</option>
+            <option>Гигиена Air-flow</option>
+            <option>Виниры, коронки</option>
+            <option>Имплантация, All-on-4/6</option>
+            <option>Брекеты, Invisalign</option>
+          </select>
+        </label>
+        <button class="btn gold" type="submit">Отправить заявку</button>
+        <p class="form-note">Это демонстрационный концепт: форма пока не отправляет данные. На рабочем сайте заявка будет приходить администратору клиники.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="contacts" id="contacts">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <div class="c-grid">
+      <div class="c-item">
+        <h3>Адрес</h3>
+        <p>Челябинск,<br>ул. Братьев Кашириных, 154, 1 этаж</p>
+      </div>
+      <div class="c-item">
+        <h3>Телефон и мессенджер</h3>
+        <p><a href="tel:+73512003699">+7 (351) 200-36-99</a></p>
+        <p class="sub">WhatsApp на этот же номер — <a href="https://wa.me/73512003699">написать</a></p>
+      </div>
+      <div class="c-item">
+        <h3>Почта и соцсети</h3>
+        <p><a href="mailto:info@dvc.vc">info@dvc.vc</a></p>
+        <p class="sub">Instagram: @davinci_dent, мы во «ВКонтакте». Meta признана экстремистской организацией и запрещена в РФ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Стоматологическая клиника «Da Vinci», Челябинск</span>
+    <span>ООО «ДА Винчи и к», работает с 2008 года</span>
+  </div>
+</footer>
+
+<!-- мобильная кнопка звонка -->
+<div class="mobile-call">
+  <a href="tel:+73512003699">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6.6 3h3l1.5 4.5-2 1.5a12.5 12.5 0 0 0 5.9 5.9l1.5-2L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" stroke="#F5F2EB" stroke-width="1.7" stroke-linejoin="round"/>
+    </svg>
+    Позвонить: +7 (351) 200-36-99
+  </a>
+</div>
+
+</body>
+</html>
